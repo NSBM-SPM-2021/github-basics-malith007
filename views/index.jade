@@ -3,6 +3,29 @@ extends layout
 block content
 
   h1.text-center User Management System
+hr.mt-3.mb-3
+
+  div.row
+    div
+    h4.mb-4 Add Users Form
+    form(action='',method='post')
+      div.row
+        div.col-12(data-role='fieldcontain')
+          fieldset(data-role='controlgroup')
+            
+            input.form-control(id='username',type='text',value='',placeholder='Username')
+      
+      div.row.mt-3
+        div.col-12(data-role='fieldcontain')
+          fieldset(data-role='controlgroup')
+            
+            input.form-control(id='email',type='text',value='',placeholder='Email Address')
+      
+      div.row.mt-3
+        div.col-12(data-role='fieldcontain')
+          fieldset(data-role='controlgroup')
+            
+            input.form-control(id='phone',type='text',value='',placeholder='Phone Number')
 
   div.d-grid.gap-2
     button.btn.btn-primary Add User
