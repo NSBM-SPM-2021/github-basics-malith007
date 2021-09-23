@@ -16,5 +16,21 @@ router.get('/', function(req, res, next) {
  }); 
 
  
+ router.post('/adduser', function (req, res) {
+  const bookdata = {
+    useranem: req.body.username,
+    email: req.body.email,
+    phone: req.body.phone,
+  }
+
+  connection.query("insert into users set?", user, function (err, result) {
+    if (err) {
+      console.error("Error");
+    } else {
+      res.redirect('/');
+    }
+  });
+
+});
 
 module.exports = router;
