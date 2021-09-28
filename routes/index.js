@@ -33,6 +33,8 @@ router.get('/', function(req, res, next) {
 
 });
 
+module.exports = router;
+
 router.post('/deleteuser', function (req, res) {
 
 
