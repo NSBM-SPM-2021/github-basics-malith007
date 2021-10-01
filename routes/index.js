@@ -37,12 +37,11 @@ module.exports = router;
 
 router.post('/deleteuser', function (req, res) {
 
-  connection.query("insert into users set?", user, function (err, result) {
+  var idBooks = req.params.id;
+  connection2.query("delete from users where userid = ?", [userid], function (err, result) {
     if (err) {
       console.error("Error");
     } else {
       res.redirect('/');
     }
-
-
-});
+  });
