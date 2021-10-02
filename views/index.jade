@@ -8,24 +8,24 @@ hr.mt-3.mb-3
   div.row
     div
     h4.mb-4 Add Users Form
-    form(action='',method='post')
+    form(action='',method='post' ,action="/adduser")
       div.row
         div.col-12(data-role='fieldcontain')
           fieldset(data-role='controlgroup')
             
-            input.form-control(id='username',type='text',value='',placeholder='Username')
+            input.form-control(name='username',id='username',type='text',value='',placeholder='Username')
       
       div.row.mt-3
         div.col-12(data-role='fieldcontain')
           fieldset(data-role='controlgroup')
             
-            input.form-control(id='email',type='text',value='',placeholder='Email Address')
+            input.form-control(name='Email',id='email',type='text',value='',placeholder='Email Address')
       
       div.row.mt-3
         div.col-12(data-role='fieldcontain')
           fieldset(data-role='controlgroup')
             
-            input.form-control(id='phone',type='text',value='',placeholder='Phone Number')
+            input.form-control(name='Phone',id='phone',type='text',value='',placeholder='Phone Number')
 
   div.d-grid.gap-2
     button.btn.btn-primary Add User
