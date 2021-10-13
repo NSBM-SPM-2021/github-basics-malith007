@@ -1,0 +1,74 @@
+<div class="col-12">
+
+<nav class="navbar navbar-light bg-primary ">
+  <h3 class="p-2 text-white">User Management System</h3>
+ 
+</nav>
+
+<div class="container mb-4">
+
+  <div>
+
+    <div class="bg-white">
+      <h4 class="my-4 p-3">Add New User</h4>
+      <hr>
+
+      <form class=" p-2" action="/adduser" method="POST">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+         
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+          
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone Number">
+         
+        </div>
+      
+        <button type="submit" class="btn btn-primary w-100 my-4">Submit</button>
+
+      </form>
+    </div>
+
+    
+
+  </div>
+
+  <div>
+    <table class="table table-info p-2">
+      <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Delete</th>
+      </tr>
+      <tbody>
+          {{#each all_users}}
+          <tr>
+             
+              <td>{{this.username}}</td>
+              <td>{{this.email}}</td>
+              <td>{{this.phone}}</td>
+              <td>
+                  <a class="btn btn-danger btn-sm" href="/deleteuser/{{this.id}}">Delete</a>
+              </td>
+
+          </tr>
+
+          {{/each}}
+
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+
+
+</div>
